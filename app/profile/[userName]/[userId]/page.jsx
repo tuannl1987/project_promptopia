@@ -5,7 +5,7 @@ import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { useParams } from 'next/navigation'
 
-import Profile from "@components/profile";
+import Profile from "@components/Profile";
 
 const UserProfile = () => {
     // Route -> /profile/[userName]/[userID]
