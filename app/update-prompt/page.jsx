@@ -7,16 +7,19 @@ import Form from "@components/Form";
 
 const EditPrompt = () => {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const promptId = searchParams.get('id');
-
   const [submitting, setSubmitting] = useState(false);
   const [post, setPost] = useState({
     prompt: '',
     tag: ''
   });
 
+  const [searchParams, setSearchParams] = useState('');
+  const [promptId, setPromptId] = useState('');
+
   useEffect(() => {
+    setSearchParams(new URLSearchParams(document.location.search));
+    setPromptId(searchParams.get('id'));
+
     const getPromptDetail = async () => {
         const response = await fetch(`/api/prompt/${promptId}`);
         const data = await response.json();

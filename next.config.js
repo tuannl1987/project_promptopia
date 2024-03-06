@@ -3,7 +3,6 @@
  */
 const nextConfig = {
     experimental: {
-      appDir: true,
       serverComponentsExternalPackages: ["mongoose"],
     },
     images: {
@@ -18,4 +17,4 @@ const nextConfig = {
     }
   }
   
-  module.exports = nextConfig
+  module.exports = nextConfig;
